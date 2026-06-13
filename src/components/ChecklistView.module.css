@@ -1,0 +1,84 @@
+.view { display: flex; flex-direction: column; gap: 12px; }
+
+.yearTabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.yearTab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: transparent;
+  transition: all 0.15s;
+  text-transform: capitalize;
+}
+.yearTab:hover { background: var(--bg-hover); color: var(--text-primary); }
+.yearTab.activeYear {
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.progressCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+}
+.progressTop { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+.progressLabel { font-size: 0.8rem; font-weight: 500; color: var(--text-secondary); text-transform: capitalize; }
+.progressPct { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--accent); }
+.progressBar { height: 5px; background: var(--bg-elevated); border-radius: 99px; overflow: hidden; }
+.progressFill { height: 100%; border-radius: 99px; transition: width 0.4s ease; }
+.progressSub { font-size: 0.72rem; color: var(--text-muted); margin-top: 7px; }
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+}
+.cardHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.cardTitle { display: flex; align-items: center; gap: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); }
+.catIcon { font-size: 1rem; }
+.catBadge { font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 99px; }
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: opacity 0.15s;
+  user-select: none;
+}
+.item:last-child { border-bottom: none; }
+.item:hover { opacity: 0.8; }
+.item.done { opacity: 0.45; }
+
+.checkbox {
+  width: 17px;
+  height: 17px;
+  border-radius: 4px;
+  border: 1.5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+.checkmark { font-size: 10px; color: #0C0F1A; font-weight: 900; }
+
+.itemLabel { font-size: 0.825rem; color: var(--text-secondary); }
+.item.done .itemLabel { text-decoration: line-through; color: var(--text-muted); }

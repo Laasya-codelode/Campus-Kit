@@ -1,0 +1,10 @@
+.wrap { display: flex; flex-direction: column; gap: 6px; margin-bottom: 1.25rem; }
+.strip {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 10px 14px; border-radius: var(--radius); border: 1px solid;
+}
+.strip.urgent { background: #2A1A1A; border-color: #5C2A2A; color: var(--red); }
+.strip.warn   { background: #231E0E; border-color: #4A3D10; color: var(--amber); }
+.strip.soft   { background: var(--surface2); border-color: var(--border); color: var(--muted); }
+.msg { font-size: 13px; font-weight: 600; }
+.sub { font-size: 11px; opacity: 0.7; margin-top: 2px; }
